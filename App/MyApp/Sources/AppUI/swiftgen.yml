@@ -1,0 +1,22 @@
+xcassets:
+  inputs:
+    # SwiftUIでの使用例: Image(asset: Asset.Images.アセット名)
+    # UIKitでの使用例: Asset.Images.アセット名.image
+    - Resources/Images.xcassets
+    # SwiftUIでの使用例: Color(asset: Asset.Colors.アセット名)
+    # UIKitでの使用例: Asset.Colors.アセット名.color
+    - Resources/Colors.xcassets
+  outputs:
+    - templateName: swift5
+      output: ${DERIVED_SOURCES_DIR}/Assets.swift
+      params:
+        publicAccess: true
+        forceProvidesNamespaces: true
+
+strings:
+  inputs: Resources/Localizable.strings
+  outputs:
+    - templateName: structured-swift5
+      output: ${DERIVED_SOURCES_DIR}/StringsGenerated.swift
+      params:
+        publicAccess: true

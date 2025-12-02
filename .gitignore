@@ -1,0 +1,48 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Xcode
+build/
+DerivedData/
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+## User settings
+xcuserdata/
+
+# Tuist
+*.xcodeproj
+*.xcworkspace
+*.generated.swift
+Tuist/Derived/
+Tuist/Dependencies/
+# Commit lockfiles for version pinning
+!Tuist/Dependencies/Lockfiles/
+
+# Swift Package Manager
+.build/
+Packages/
+.swiftpm/
+Package.resolved
+.package.resolved
+
+# Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# CocoaPods
+Pods/
+
+# Carthage
+Carthage/Checkouts
+Carthage/Build/
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
