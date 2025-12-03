@@ -114,10 +114,10 @@ let package = Package(
 
 ## 🧩 Adding New Modules
 
-To add a new feature module (e.g., a Chat feature), follow the **Package** method.
+To add a new feature module (e.g., a Login feature), follow the **Package** method.
 
-1.  **Folder Creation**: Create the source files and folder (e.g., `App/NewApp/Sources/ChatFeature`).
-2.  **Manifest Update**: Edit `Package.swift` to add the new `.library` and `.target` entries for `ChatFeature`.
+1.  **Folder Creation**: Create the source files and folder (e.g., `App/NewApp/Sources/LoginFeature`).
+2.  **Manifest Update**: Edit `Package.swift` to add the new `.library` and `.target` entries for `LoginFeature`.
 3.  **Regenerate**:
     ```bash
     mise x tuist -- tuist generate
