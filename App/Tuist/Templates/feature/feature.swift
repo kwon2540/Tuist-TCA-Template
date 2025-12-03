@@ -1,21 +1,23 @@
 import ProjectDescription
 
 let nameAttribute: Template.Attribute = .required("name")
+let moduleAttribute: Template.Attribute = .required("module")
 
 let template = Template(
-    description: "TCA Feature Module Template (Core/View Separation Structure)",
+    description: "TCA Feature Template (Creates Reducer & View)",
     attributes: [
         nameAttribute,
+        moduleAttribute,
     ],
     items: [
         // 1. Reducer Logic (Core Folder)
         .file(
-            path: "MyApp/Sources/\(nameAttribute)/Core/{{ name }}Reducer.swift",
+            path: "MyApp/Sources/\(moduleAttribute)/Core/{{ name }}Reducer.swift",
             templatePath: "Reducer.stencil"
         ),
         // 2. SwiftUI View (Views Folder)
         .file(
-            path: "MyApp/Sources/\(nameAttribute)/Views/{{ name }}View.swift",
+            path: "MyApp/Sources/\(moduleAttribute)/Views/{{ name }}View.swift",
             templatePath: "View.stencil"
         ),
     ]

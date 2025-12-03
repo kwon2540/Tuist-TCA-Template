@@ -112,20 +112,26 @@ let package = Package(
 
 ---
 
-## 🧩 Adding New Modules
+## 🧩 Adding New Modules & Features
 
-To add a new feature module (e.g., a Login feature), use the **Scaffolding** method.
+To add a new feature, use the **Scaffolding** method. This template supports creating files within a specific module.
 
 ### 1. Generate Feature Files
-Use the custom `feature` scaffold to automatically create the necessary `Core/Reducer.swift` and `Views/View.swift` files.
+Use the custom `feature` scaffold. You must specify the **target module** and the **feature name**.
 
 ```bash
-# Replace 'Login' with your desired feature name (e.g., Settings, Profile)
-mise x tuist -- scaffold feature --name Login
+# Syntax: tuist scaffold feature --module <TargetModule> --name <FeatureName>
+
+# Example 1: Create a new 'Login' feature inside a 'Login' module folder
+mise x tuist -- scaffold feature --module Login --name Login
+
+# Example 2: Add a 'Logout' feature to the existing 'Login' module
+mise x tuist -- scaffold feature --module Login --name Logout
 ```
 
-### 2. Link Module in Package.swift (Manual)
-Open the `App/MyApp/Package.swift` file and add the new module to the `products` and `targets` arrays.
+### 2. Link Module in Package.swift (For New Modules Only)
+If you created a **new module folder** (e.g., `Login`), you must register it in `Package.swift`.
+Open `App/MyApp/Package.swift` and add the new module to the `products` and `targets` arrays.
 
 ### 3. Regenerate Project
 Apply the changes to your Xcode workspace.
