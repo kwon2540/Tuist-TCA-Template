@@ -13,7 +13,7 @@ let project = Project(
             destinations: AppConfiguration.destinations,
             product: .app,
             productName: "\(AppConfiguration.appName)", 
-            bundleId: "\(AppConfiguration.organizationName).\(AppConfiguration.appName)",
+            bundleId: "\(AppConfiguration.organizationName).\(AppConfiguration.appName.lowercased())",
             deploymentTargets: AppConfiguration.deploymentTarget,
             // Relative path: Production -> Projects(..) -> Shared -> Info.plist
             infoPlist: .file(path: "../Shared/Info.plist"),
