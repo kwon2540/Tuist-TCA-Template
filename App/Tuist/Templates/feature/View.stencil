@@ -1,0 +1,24 @@
+import SwiftUI
+import ComposableArchitecture
+import AppUI
+
+// MARK: - View
+@ViewAction(for: {{ name }}Feature.self)
+struct {{ name }}View: View {
+    @Bindable var store: StoreOf<{{ name }}Feature>
+
+    init(store: StoreOf<{{ name }}Feature>) {
+        self.store = store
+    }
+
+    var body: some View {
+        VStack {
+            Text("Welcome to {{ name }} View")
+                .font(.largeTitle)
+                .padding()
+        }
+        .onAppear {
+            send(.onAppear)
+        }
+    }
+}
