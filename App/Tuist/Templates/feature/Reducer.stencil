@@ -4,8 +4,9 @@ import ComposableArchitecture
 @Reducer
 struct {{ name }}Feature {
     
-    @Reducer(state: .equatable)
+    @Reducer
     enum Destination {
+        case destination
         // Add Destination
     }
     
@@ -33,7 +34,7 @@ struct {{ name }}Feature {
         case view(View)
         case delegate(Delegate)
         case parent(Parent)
-        case destination(PresentationAction<Destination>)
+        case destination(PresentationAction<Destination.Action>)
     }
 
     var body: some ReducerOf<Self> {
@@ -52,7 +53,7 @@ struct {{ name }}Feature {
                 return .none 
             }
         }
-        .ifLet(\.destination, action: \.destination)
+        .ifLet(\.$destination, action: \.destination)
     }
 }
 
