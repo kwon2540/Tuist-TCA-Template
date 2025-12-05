@@ -3,13 +3,12 @@ import ComposableArchitecture
 // MARK: - Reducer
 @Reducer
 struct {{ name }}Feature {
-    
     @Reducer
     enum Destination {
         case destination
         // Add Destination
     }
-    
+
     @ObservableState
     struct State: Equatable {
         @Presents var destination: Destination?
@@ -39,7 +38,7 @@ struct {{ name }}Feature {
 
     var body: some ReducerOf<Self> {
         BindingReducer()
-        
+
         Reduce { state, action in
             switch action {
             case .view(.onAppear):
