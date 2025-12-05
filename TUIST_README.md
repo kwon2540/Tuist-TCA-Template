@@ -123,10 +123,10 @@ Use the custom `feature` scaffold. You must specify the **target module** and th
 # Syntax: tuist scaffold feature --module <TargetModule> --name <FeatureName>
 
 # Example 1: Create a new 'Login' feature inside a 'Login' module folder
-mise x tuist -- scaffold feature --module Login --name Login
+mise x tuist -- tuist scaffold feature --module Login --name Login
 
 # Example 2: Add a 'Logout' feature to the existing 'Login' module
-mise x tuist -- scaffold feature --module Login --name Logout
+mise x tuist -- tuist scaffold feature --module Login --name Logout
 ```
 
 ### 2. Link Module in Package.swift (For New Modules Only)
