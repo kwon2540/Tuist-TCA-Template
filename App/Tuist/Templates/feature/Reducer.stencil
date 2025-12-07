@@ -11,7 +11,7 @@ struct {{ name }} {
 
     @ObservableState
     struct State: Equatable {
-        @Presents var destination: Destination?
+        @Presents var destination: Destination.State?
         // Add State
     }
 
