@@ -2,7 +2,7 @@ import ComposableArchitecture
 
 // MARK: - Reducer
 @Reducer
-struct {{ name }}Feature {
+struct {{ name }} {
     @Reducer
     enum Destination {
         case destination

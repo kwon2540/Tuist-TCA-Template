@@ -13,7 +13,7 @@ let template = Template(
     items: [
         // 1. Reducer Logic (Core Folder)
         .file(
-            path: "\(AppConfiguration.appName)/Sources/\(moduleAttribute)/Core/{{ name }}Feature.swift",
+            path: "\(AppConfiguration.appName)/Sources/\(moduleAttribute)/Core/{{ name }}.swift",
             templatePath: "Reducer.stencil"
         ),
         // 2. SwiftUI View (Views Folder)

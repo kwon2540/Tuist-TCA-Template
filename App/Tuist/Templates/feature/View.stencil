@@ -1,13 +1,13 @@
-import SwiftUI
-import ComposableArchitecture
 import AppUI
+import ComposableArchitecture
+import SwiftUI
 
 // MARK: - View
-@ViewAction(for: {{ name }}Feature.self)
+@ViewAction(for: {{ name }}.self)
 struct {{ name }}View: View {
-    @Bindable var store: StoreOf<{{ name }}Feature>
+    @Bindable var store: StoreOf<{{ name }}>
 
-    init(store: StoreOf<{{ name }}Feature>) {
+    init(store: StoreOf<{{ name }}>) {
         self.store = store
     }
 
